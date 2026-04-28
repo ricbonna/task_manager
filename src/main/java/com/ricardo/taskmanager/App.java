@@ -11,22 +11,13 @@ public class App
     public static void main( String[] args )
     {
 
-    	ProcessHandle.allProcesses()
-    		.forEach(p -> {
-    			String path = p.info().command().orElse("N/A");
-    			if(path.equals("N/A")) {
-    				System.out.println("N/A PID: " + p.pid());
-    			}
-    			else {
-    				String name = Path.of(path).getFileName().toString();
-					System.out.println(name + " PID: " + p.pid());
-					
-    			}
-    					
-    		});
+    	ProcessManager manager = new ProcessManager();
     			
-    		
-    		
+		List<Process> list = manager.idAndName();
+    		list.forEach(p -> {
+    			System.out.println("Name: " + p.processname + " ID: " + p.id);
+    			
+    		});
     	
   
     	 		
