@@ -9,6 +9,10 @@ public class Process{
 
 	
 long id;
+long cpuuse;
+String starttime;
+String user;
 String processname;
+
 	
 }

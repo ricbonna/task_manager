@@ -15,7 +15,7 @@ public class App
     			
 		List<Process> list = manager.idAndName();
     		list.forEach(p -> {
-    			System.out.println("Name: " + p.processname + " ID: " + p.id);
+    			System.out.println("Name: " + p.processname + " ID: " + p.id + " User: " + p.user + " CPU: " + p.cpuuse + " " + p.starttime);
     			
     		});
     	
